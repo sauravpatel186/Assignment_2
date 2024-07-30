@@ -1,5 +1,6 @@
 package com.example.assignment_2
 
+import AddTaskFragment
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -39,5 +40,14 @@ class MainActivity : AppCompatActivity() {
 
         supportFragmentManager.beginTransaction().replace(containerId,fragment).commit()
 
+    }
+    fun updateTask(updatedTask: Task) {
+        val index = AddTaskFragment.taskList.indexOfFirst { it.id == updatedTask.id }
+        if (index != -1) {
+            AddTaskFragment.taskList[index] = updatedTask
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.frame_layout, ViewTaskFragment())
+                .commit()
+        }
     }
 }

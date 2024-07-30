@@ -36,12 +36,42 @@
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
             />
-        <Spinner
-            android:id="@+id/task_priority"
+
+        <RadioGroup
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:id="@+id/priority_radio"
             android:layout_width="305dp"
             android:layout_height="50dp"
-            android:layout_marginTop="30dp"
-            android:layout_gravity="center"/>
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Priority"
+                android:textSize="20dp"/>
+            <RadioButton
+                android:layout_marginStart="10dp"
+                android:id="@+id/urgent_priority"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Urgent"/>
+            <RadioButton
+                android:id="@+id/moderate_priority"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Moderate"/>
+            <RadioButton
+                android:id="@+id/low_priority"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Low"/>
+        </RadioGroup>
+<!--        <Spinner-->
+<!--            android:id="@+id/task_priority"-->
+<!--            android:layout_width="305dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_marginTop="30dp"-->
+<!--            android:layout_gravity="center"/>-->
         <Button
             android:id="@+id/add_task_button"
             android:layout_width="305dp"
